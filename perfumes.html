@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfumes | Perfume World</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div id="loader"></div>
+
+    <header class="page-header">
+        <h1>Our Perfumes</h1>
+        <p>Explore our luxury collection and discover your signature scent</p>
+    </header>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="perfumes.html" class="active">Perfumes</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+        <a href="cart.html">Cart (<span id="cart-count">0</span>)</a>
+        <a href="login.html">Login</a>
+    </nav>
+
+    <section class="section-title">
+        <h2>Luxury Collection</h2>
+        <p>Elegant perfumes for every mood and occasion</p>
+    </section>
+
+    <div class="search-box">
+        <input type="text" id="search" placeholder="Search perfume..." onkeyup="searchPerfumes()">
+    </div>
+
+    <section class="products">
+
+        <div class="card">
+            <span class="badge">Best Seller</span>
+            <div class="img-box">
+                <img src="images/perfume1.jpg" alt="Golden Oud">
+            </div>
+            <div class="info">
+                <h3>Golden Oud</h3>
+                <p>Luxury oriental fragrance with rich and long-lasting notes.</p>
+                <div class="stars">★★★★★</div>
+                <p class="price">$45</p>
+                <button class="buy-btn" onclick="addToCart('Golden Oud', 45, 'images/perfume1.jpg')">Add to Cart</button>
+            </div>
+        </div>
+
+        <div class="card">
+            <span class="badge">Popular</span>
+            <div class="img-box">
+                <img src="images/perfume2.jpg" alt="Rose Night">
+            </div>
+            <div class="info">
+                <h3>Rose Night</h3>
+                <p>Floral scent perfect for evening occasions with a soft touch.</p>
+                <div class="stars">★★★★☆</div>
+                <p class="price">$35</p>
+                <button class="buy-btn" onclick="addToCart('Rose Night', 35, 'images/perfume2.jpg')">Add to Cart</button>
+            </div>
+        </div>
+
+        <div class="card">
+            <span class="badge">Luxury</span>
+            <div class="img-box">
+                <img src="images/perfume3.jpg" alt="Black Secret">
+            </div>
+            <div class="info">
+                <h3>Black Secret</h3>
+                <p>Mysterious and modern fragrance for bold personalities.</p>
+                <div class="stars">★★★★★</div>
+                <p class="price">$50</p>
+                <button class="buy-btn" onclick="addToCart('Black Secret', 50, 'images/perfume3.jpg')">Add to Cart</button>
+            </div>
+        </div>
+
+        <div class="card">
+            <span class="badge">New</span>
+            <div class="img-box">
+                <img src="images/perfume4.jpg" alt="Amber Gold">
+            </div>
+            <div class="info">
+                <h3>Amber Gold</h3>
+                <p>Warm and sweet perfume with elegant amber notes.</p>
+                <div class="stars">★★★★☆</div>
+                <p class="price">$40</p>
+                <button class="buy-btn" onclick="addToCart('Amber Gold', 40, 'images/perfume4.jpg')">Add to Cart</button>
+            </div>
+        </div>
+
+        <div class="card">
+            <span class="badge">Fresh</span>
+            <div class="img-box">
+                <img src="images/perfume5.jpg" alt="Fresh Breeze">
+            </div>
+            <div class="info">
+                <h3>Fresh Breeze</h3>
+                <p>Light and refreshing daily perfume with a clean scent.</p>
+                <div class="stars">★★★★☆</div>
+                <p class="price">$30</p>
+                <button class="buy-btn" onclick="addToCart('Fresh Breeze', 30, 'images/perfume5.jpg')">Add to Cart</button>
+            </div>
+        </div>
+
+        <div class="card">
+            <span class="badge">Exclusive</span>
+            <div class="img-box">
+                <img src="images/perfume6.jpg" alt="Night Velvet">
+            </div>
+            <div class="info">
+                <h3>Night Velvet</h3>
+                <p>Elegant scent for special nights with a luxurious finish.</p>
+                <div class="stars">★★★★★</div>
+                <p class="price">$55</p>
+                <button class="buy-btn" onclick="addToCart('Night Velvet', 55, 'images/perfume6.jpg')">Add to Cart</button>
+            </div>
+        </div>
+
+    </section>
+
+    <section class="newsletter">
+        <h2>Stay Updated</h2>
+        <p>Subscribe to receive special offers and new perfume news</p>
+        <form class="newsletter-form">
+            <input type="email" placeholder="Enter your email">
+            <button type="submit">Subscribe</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Perfume World | Designed with elegance</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

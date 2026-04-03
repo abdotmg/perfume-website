@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart | Perfume World</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div id="loader"></div>
+
+    <header class="page-header">
+        <h1>Your Cart</h1>
+        <p>Review your selected perfumes</p>
+    </header>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="perfumes.html">Perfumes</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+        <a href="cart.html" class="active">Cart (<span id="cart-count">0</span>)</a>
+        <a href="login.html">Login</a>
+    </nav>
+
+    <section class="cart-section">
+        <div id="cart-items"></div>
+
+        <div class="cart-summary">
+            <h2>Cart Summary</h2>
+            <p id="cart-total">Total: $0</p>
+            <button class="clear-btn" onclick="clearCart()">Clear Cart</button>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Perfume World | Designed with elegance</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

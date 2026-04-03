@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login | Perfume World</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div id="loader"></div>
+
+    <header class="page-header">
+        <h1>Login</h1>
+        <p>Access your perfume account</p>
+    </header>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="perfumes.html">Perfumes</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+        <a href="cart.html">Cart (<span id="cart-count">0</span>)</a>
+        <a href="login.html" class="active">Login</a>
+    </nav>
+
+    <section class="login-wrapper">
+        <div class="login-card fancy-box">
+            <div class="login-top">
+                <h2>Welcome Back</h2>
+                <p>Login to continue your fragrance journey</p>
+            </div>
+
+            <form class="contact-form">
+                <label for="login-email">Email</label>
+                <input type="email" id="login-email" placeholder="Enter your email" required>
+
+                <label for="login-password">Password</label>
+                <input type="password" id="login-password" placeholder="Enter your password" required>
+
+                <button type="submit" class="send-btn">Login</button>
+            </form>
+
+            <div class="login-extra">
+                <p>Don’t have an account? <span>Create one</span></p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Perfume World | Designed with elegance</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
