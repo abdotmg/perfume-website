@@ -37,8 +37,8 @@ nav {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 35px;
-    padding: 18px 15px;
+    gap: 22px;
+    padding: 16px 15px;
     position: sticky;
     top: 0;
     z-index: 1000;
@@ -51,11 +51,111 @@ nav a {
     font-size: 17px;
     font-weight: bold;
     transition: 0.3s;
+    white-space: nowrap;
 }
 
 nav a:hover,
 nav a.active {
     color: #f5c16c;
+}
+
+/* PROFILE NAV */
+.nav-right {
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.profile-box {
+    position: relative;
+    cursor: pointer;
+}
+
+.profile-icon {
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    background: linear-gradient(145deg, #f5c16c, #ddb05c);
+    color: #111;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+    font-weight: bold;
+    box-shadow: 0 0 15px rgba(245, 193, 108, 0.18);
+    transition: 0.3s;
+}
+
+.profile-icon:hover {
+    transform: scale(1.06);
+}
+
+.profile-menu {
+    display: none;
+    position: absolute;
+    right: 0;
+    top: 55px;
+    width: 260px;
+    background: linear-gradient(145deg, #171717, #202020);
+    border: 1px solid #2a2a2a;
+    border-radius: 16px;
+    padding: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.55);
+}
+
+.profile-menu.show-menu {
+    display: block;
+    animation: fadeIn 0.25s ease;
+}
+
+.user-info {
+    margin-bottom: 10px;
+}
+
+.user-info p:first-child {
+    color: #f5c16c;
+    font-weight: bold;
+    font-size: 16px;
+    margin-bottom: 4px;
+}
+
+.user-info p:last-child {
+    color: #cccccc;
+    font-size: 13px;
+    word-break: break-word;
+}
+
+.profile-menu hr {
+    border: none;
+    border-top: 1px solid #2a2a2a;
+    margin: 10px 0;
+}
+
+.profile-menu a {
+    display: block;
+    color: #f5c16c;
+    text-decoration: none;
+    padding: 10px 12px;
+    border-radius: 8px;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.profile-menu a:hover {
+    background-color: #f5c16c;
+    color: #111;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-8px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 /* SECTION TITLE */
@@ -478,7 +578,7 @@ nav a.active {
 
 .login-card {
     width: 100%;
-    max-width: 500px;
+    max-width: 550px;
     padding: 35px;
 }
 
@@ -515,9 +615,38 @@ nav a.active {
 }
 
 .single-box {
-    max-width: 500px;
+    max-width: 700px;
     margin: 0 auto;
     grid-column: 1 / -1;
+}
+
+/* PROFILE PAGE */
+.profile-card {
+    width: 100%;
+    max-width: 600px;
+    padding: 35px;
+}
+
+.profile-row {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 16px 18px;
+    margin-bottom: 15px;
+    border-radius: 12px;
+    background-color: #111;
+    border: 1px solid #2b2b2b;
+}
+
+.profile-label {
+    color: #f5c16c;
+    font-weight: bold;
+}
+
+.profile-value {
+    color: #e6e6e6;
+    text-align: right;
+    word-break: break-word;
 }
 
 /* CART */
@@ -663,25 +792,74 @@ footer {
     border-top: 1px solid #222;
 }
 
-/* RESPONSIVE */
+/* TABLET */
 @media (max-width: 992px) {
     .products {
         grid-template-columns: repeat(2, 1fr);
     }
+
+    nav {
+        gap: 16px;
+    }
+
+    nav a {
+        font-size: 15px;
+    }
 }
 
+/* MOBILE */
 @media (max-width: 768px) {
+    .page-header {
+        padding: 35px 15px;
+    }
+
     .page-header h1 {
-        font-size: 32px;
+        font-size: 30px;
+    }
+
+    .page-header p {
+        font-size: 15px;
     }
 
     nav {
-        flex-direction: column;
+        justify-content: flex-start;
+        flex-wrap: nowrap;
+        overflow-x: auto;
         gap: 12px;
+        padding: 14px 12px;
+        scrollbar-width: none;
+        -ms-overflow-style: none;
+    }
+
+    nav::-webkit-scrollbar {
+        display: none;
+    }
+
+    nav a {
+        font-size: 14px;
+        flex: 0 0 auto;
+    }
+
+    .nav-right {
+        position: sticky;
+        right: 0;
+        top: auto;
+        transform: none;
+        margin-left: auto;
+        flex: 0 0 auto;
+        background-color: #111111;
+        padding-left: 6px;
+    }
+
+    .profile-menu {
+        right: 0;
+        top: 48px;
+        width: 220px;
     }
 
     .products {
         grid-template-columns: 1fr;
+        gap: 20px;
     }
 
     .newsletter h2 {
@@ -707,11 +885,36 @@ footer {
         justify-content: center;
     }
 
+    .hero {
+        padding: 55px 16px;
+    }
+
     .hero h2 {
-        font-size: 30px;
+        font-size: 28px;
+    }
+
+    .hero p {
+        font-size: 15px;
     }
 
     .contact-hero h2 {
         font-size: 27px;
+    }
+
+    .profile-row {
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .profile-value {
+        text-align: left;
+    }
+
+    .login-card,
+    .profile-card,
+    .contact-info-box,
+    .contact-form-box,
+    .cart-summary {
+        padding: 22px;
     }
 }
