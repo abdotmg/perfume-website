@@ -8,28 +8,49 @@
 </head>
 <body>
 
-    <!-- HEADER -->
+    <div id="loader"></div>
+
     <header class="page-header">
         <h1>Perfume World</h1>
         <p>Luxury perfumes that define your identity</p>
     </header>
 
-    <!-- NAV -->
     <nav>
         <a href="index.html" class="active">Home</a>
         <a href="perfumes.html">Perfumes</a>
         <a href="about.html">About</a>
         <a href="contact.html">Contact</a>
+        <a href="cart.html">Cart (<span id="cart-count">0</span>)</a>
+
+        <div class="nav-right">
+            <div class="profile-box" onclick="toggleProfileMenu(event)">
+                <div class="profile-icon">👤</div>
+
+                <div class="profile-menu" id="profile-menu">
+                    <div id="guest-menu">
+                        <a href="login.html">Login</a>
+                    </div>
+
+                    <div id="user-menu" style="display:none;">
+                        <div class="user-info">
+                            <p id="nav-user-name"></p>
+                            <p id="nav-user-email"></p>
+                        </div>
+                        <hr>
+                        <a href="profile.html">My Profile</a>
+                        <a href="#" onclick="logoutUser()">Logout</a>
+                    </div>
+                </div>
+            </div>
+        </div>
     </nav>
 
-    <!-- HERO -->
     <section class="hero">
         <h2>Discover Your Signature Scent</h2>
         <p>Explore our exclusive collection of luxury perfumes designed for elegance and style</p>
         <a href="perfumes.html" class="btn">Explore Collection</a>
     </section>
 
-    <!-- FEATURED -->
     <section class="section-title">
         <h2>Featured Perfumes</h2>
         <p>Our most popular and loved fragrances</p>
@@ -78,7 +99,6 @@
 
     </section>
 
-    <!-- WHY US -->
     <section class="features">
 
         <div class="feature-box">
@@ -98,17 +118,16 @@
 
     </section>
 
-    <!-- CTA -->
     <section class="cta">
         <h2>Find Your Perfect Perfume</h2>
         <p>Browse our full collection and discover something special</p>
         <a href="perfumes.html" class="btn">Shop Now</a>
     </section>
 
-    <!-- FOOTER -->
     <footer>
         <p>&copy; 2026 Perfume World | Designed with elegance</p>
     </footer>
 
+    <script src="script.js"></script>
 </body>
 </html>
