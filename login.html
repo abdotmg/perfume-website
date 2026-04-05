@@ -11,8 +11,8 @@
     <div id="loader"></div>
 
     <header class="page-header">
-        <h1>Login</h1>
-        <p>Access your perfume account</p>
+        <h1>Account</h1>
+        <p>Login or create a new account to continue shopping</p>
     </header>
 
     <nav>
@@ -21,17 +21,38 @@
         <a href="about.html">About</a>
         <a href="contact.html">Contact</a>
         <a href="cart.html">Cart (<span id="cart-count">0</span>)</a>
-        <a href="login.html" class="active">Login</a>
+
+        <div class="nav-right">
+            <div class="profile-box" onclick="toggleProfileMenu(event)">
+                <div class="profile-icon">👤</div>
+
+                <div class="profile-menu" id="profile-menu">
+                    <div id="guest-menu">
+                        <a href="login.html">Login</a>
+                    </div>
+
+                    <div id="user-menu" style="display:none;">
+                        <div class="user-info">
+                            <p id="nav-user-name"></p>
+                            <p id="nav-user-email"></p>
+                        </div>
+                        <hr>
+                        <a href="profile.html">My Profile</a>
+                        <a href="#" onclick="logoutUser()">Logout</a>
+                    </div>
+                </div>
+            </div>
+        </div>
     </nav>
 
     <section class="login-wrapper">
         <div class="login-card fancy-box">
             <div class="login-top">
-                <h2>Welcome Back</h2>
-                <p>Login to continue your fragrance journey</p>
+                <h2>Login</h2>
+                <p>Enter your account details</p>
             </div>
 
-            <form class="contact-form">
+            <form class="contact-form" onsubmit="loginUser(event)">
                 <label for="login-email">Email</label>
                 <input type="email" id="login-email" placeholder="Enter your email" required>
 
@@ -41,9 +62,26 @@
                 <button type="submit" class="send-btn">Login</button>
             </form>
 
-            <div class="login-extra">
-                <p>Don’t have an account? <span>Create one</span></p>
+            <div class="login-top" style="margin-top: 35px;">
+                <h2>Create Account</h2>
+                <p>Create a new account if you do not have one</p>
             </div>
+
+            <form class="contact-form" onsubmit="registerUser(event)">
+                <label for="register-name">Full Name</label>
+                <input type="text" id="register-name" placeholder="Enter your full name" required>
+
+                <label for="register-email">Email</label>
+                <input type="email" id="register-email" placeholder="Enter your email" required>
+
+                <label for="register-password">Password</label>
+                <input type="password" id="register-password" placeholder="Create password" required>
+
+                <label for="register-confirm-password">Confirm Password</label>
+                <input type="password" id="register-confirm-password" placeholder="Confirm password" required>
+
+                <button type="submit" class="send-btn">Create Account</button>
+            </form>
         </div>
     </section>
 
