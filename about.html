@@ -3,12 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Us</title>
+    <title>About | Perfume World</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <header>
+    <div id="loader"></div>
+
+    <header class="page-header">
         <h1>About Us</h1>
         <p>Learn more about our perfume website</p>
     </header>
@@ -16,27 +18,53 @@
     <nav>
         <a href="index.html">Home</a>
         <a href="perfumes.html">Perfumes</a>
-        <a href="about.html">About</a>
+        <a href="about.html" class="active">About</a>
         <a href="contact.html">Contact</a>
+        <a href="cart.html">Cart (<span id="cart-count">0</span>)</a>
+
+        <div class="nav-right">
+            <div class="profile-box" onclick="toggleProfileMenu(event)">
+                <div class="profile-icon">👤</div>
+
+                <div class="profile-menu" id="profile-menu">
+                    <div id="guest-menu">
+                        <a href="login.html">Login</a>
+                    </div>
+
+                    <div id="user-menu" style="display:none;">
+                        <div class="user-info">
+                            <p id="nav-user-name"></p>
+                            <p id="nav-user-email"></p>
+                        </div>
+                        <hr>
+                        <a href="profile.html">My Profile</a>
+                        <a href="#" onclick="logoutUser()">Logout</a>
+                    </div>
+                </div>
+            </div>
+        </div>
     </nav>
 
-    <section class="about">
-        <h2>Who We Are</h2>
-        <p>
-            Perfume World is a simple perfume website created to show different types of perfumes.
-            The website is designed using HTML and CSS with responsive design.
-        </p>
+    <section class="contact-section">
+        <div class="contact-info-box fancy-box single-box">
+            <h2>Who We Are</h2>
+            <p>
+                Perfume World is a simple perfume website created to show different types of perfumes.
+                The website is designed using HTML, CSS, and JavaScript with responsive design.
+            </p>
 
-        <h2>Our Goal</h2>
-        <p>
-            Our goal is to help users explore perfumes in an easy and attractive way.
-            We want the website to be simple, clear, and suitable for all screen sizes.
-        </p>
+            <h2 style="margin-top:20px;">Our Goal</h2>
+            <p>
+                Our goal is to help users explore perfumes in an easy and attractive way.
+                We want the website to be simple, clear, and suitable for all screen sizes.
+            </p>
+        </div>
     </section>
 
     <footer>
-        <p>&copy; 2026 Perfume World. All rights reserved.</p>
+        <p>&copy; 2026 Perfume World | Designed with elegance</p>
     </footer>
 
+    <script src="script.js"></script>
 </body>
 </html>
