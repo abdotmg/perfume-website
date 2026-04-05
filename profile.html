@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile | Perfume World</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div id="loader"></div>
+
+    <header class="page-header">
+        <h1>My Profile</h1>
+        <p>Manage your account information</p>
+    </header>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="perfumes.html">Perfumes</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+        <a href="cart.html">Cart (<span id="cart-count">0</span>)</a>
+
+        <div class="nav-right">
+            <div class="profile-box" onclick="toggleProfileMenu(event)">
+                <div class="profile-icon">👤</div>
+
+                <div class="profile-menu" id="profile-menu">
+                    <div id="guest-menu">
+                        <a href="login.html">Login</a>
+                    </div>
+
+                    <div id="user-menu" style="display:none;">
+                        <div class="user-info">
+                            <p id="nav-user-name"></p>
+                            <p id="nav-user-email"></p>
+                        </div>
+                        <hr>
+                        <a href="profile.html">My Profile</a>
+                        <a href="#" onclick="logoutUser()">Logout</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <section class="login-wrapper">
+        <div class="profile-card fancy-box">
+            <div class="login-top">
+                <h2>Account Owner</h2>
+                <p>Your saved profile information</p>
+            </div>
+
+            <div class="profile-row">
+                <div class="profile-label">Full Name</div>
+                <div class="profile-value" id="profile-name"></div>
+            </div>
+
+            <div class="profile-row">
+                <div class="profile-label">Email Address</div>
+                <div class="profile-value" id="profile-email"></div>
+            </div>
+
+            <button class="send-btn" onclick="logoutUser()" style="margin-top: 10px;">Logout</button>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Perfume World | Designed with elegance</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
